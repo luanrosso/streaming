@@ -1,5 +1,6 @@
 # Projeto Streaming - Banco de dados II
-Integrantes
+Integrantes:
 Luan Rosso - @luanrosso
+
 Filipe Guizzo - @Filipe-Guizzo
 
