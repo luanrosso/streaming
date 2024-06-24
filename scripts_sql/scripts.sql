@@ -256,4 +256,64 @@ create unique index ix_users_subscribes_user_streamer_subscribe on users_subscri
 create unique index ix_videos_name_url on videos (title, url);
 
 
+/* Questions */
+
+/* Qual o valor total das doações de uma live?  */
+
+create or replace function fc_total_stream_donations(
+	 param_id integer
+)	
+returns numeric 
+language plpgsql as $$
+declare
+   total numeric ;
+begin 
+   SELECT sum(dt.value) into total
+   FROM donations dt
+   where dt.stream_id = param_id;
+   RETURN total;
+end;
+$$;
+
+select fc_total_stream_donations(1);
+
+/* Quais as permissoes de um usuário moderador?  */
+
+select ro."name", ab."permission" 
+from roles ro
+inner join roles_abilities ra on ra.role_id = ro.id
+inner join abilities ab on ab.id = ra.ability_id
+where ro."name" = 'Moderador'
+
+/* Quantos mensagens foram enviadas em uma live?  */
+
+create or replace function fc_total_stream_chats(
+	 param_id integer
+)	
+returns integer 
+language plpgsql as $$
+declare
+   total integer ;
+begin 
+   SELECT count(*) into total
+   FROM chats ch
+   where ch.stream_id = param_id;
+   RETURN total;
+end;
+$$;
+
+select fc_total_stream_chats(1);
+
+/* Quais são os inscritos de cada streamer?  */
+
+create view vw_users_subcribes as
+select es."name" as streamer, us."name" as user, su.date_subscribe , su.date_unsubscribe
+from users_subscribes usb
+inner join users us on us.id = usb.user_id
+inner join users es on es.id = usb.streamer_id
+inner join subscribes su on su.id = usb.subscribe_id
+
+select * from vw_users_subcribes
+
+
 
