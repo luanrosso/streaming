@@ -11,7 +11,7 @@ Filipe Guizzo - @Filipe-Guizzo
 Utilizamos a ferramenta de modelagem de dados draw.io para criação do modelo físico do banco de dados, para posterior exportação dos scripts DDL das tabelas e relacionamentos.
 Arquivo fonte: modelo_fisico
 
-![Texto Alternativo] (https://github.com/luanrosso/streaming/blob/main/modelo_fisico/diagramaStreaming2.0.drawio.png)
+<img src="https://github.com/luanrosso/streaming/blob/main/modelo_fisico/diagramaStreaming2.0.drawio.png" alt="Modelo ER">
 
 # Dicionário de Dados
 
