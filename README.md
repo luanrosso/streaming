@@ -19,6 +19,7 @@ As informações sobre as tabelas e índices foram documentados na planilha dici
 
 # Código Fonte do CRUD
 Linguagem de Programação React, TypeScript e Express.
+
 Projeto Serviço de Streaming
 
 # Relatório Final
