@@ -17,6 +17,9 @@ Arquivo fonte: modelo_fisico
 
 As informações sobre as tabelas e índices foram documentados na planilha dicionario-dados.xlsx
 
+# Código Fonte do CRUD
+Linguagem de Programação React, TypeScript e Express.
+Projeto Serviço de Streaming
 
 # Relatório Final
 O relatório final está disponível no arquivo RelatórioBDII.docx
