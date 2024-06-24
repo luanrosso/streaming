@@ -134,8 +134,15 @@ insert into categories ("name") values('React');
 insert into categories ("name") values('Vendas');
 
 insert into streams (title, description, date_open, user_id, category_id) values('Darksouls 3 Até Zerar', 'Zerando Darksouls 3', '2024-05-15 15:30:00.000', 1, 1);
-insert into streams (title, description, date_open, user_id, category_id) values('Reagindo a um copo de agua', 'Um cara reagindo a um copo com agua dentro', '2024-05-15 16:30:00.000', 1, 2);
+insert into streams (title, description, date_open, user_id, category_id) values('Cuphead Até Morrer', 'Jogando Cuphead', '2024-05-15 15:30:00.000', 1, 1);
+insert into streams (title, description, date_open, user_id, category_id) values('GtaRP', 'RolePlay Cidade Alta', '2024-05-15 15:30:00.000', 1, 1);
+insert into streams (title, description, date_open, user_id, category_id) values('Minecrat 1.12.1', 'Nova Versão', '2024-05-15 15:30:00.000', 1, 1);
+insert into streams (title, description, date_open, user_id, category_id) values('Reagindo a um copo de agua', 'Um cara reagindo a um copo com agua dentro', ' ', 1, 2);
+insert into streams (title, description, date_open, user_id, category_id) values('Reagindo a um copo de agua PT 2', 'Um cara reagindo a um copo com agua dentro', '2024-05-15 15:30:00.000', 1, 2);
+insert into streams (title, description, date_open, user_id, category_id) values('Reagindo a um copo de agua PT 3', 'Um cara reagindo a um copo com agua dentro', '2024-05-15 15:30:00.000', 1, 2);
+insert into streams (title, description, date_open, user_id, category_id) values('Reagindo Memes', 'Memes quinta serie', '2024-05-15 15:30:00.000', 1, 2);
 insert into streams (title, description, date_open, user_id, category_id) values('Leilão de Carros', 'Leilão de carros usados', '2024-05-15 17:30:00.000', 1, 3);
+insert into streams (title, description, date_open, user_id, category_id) values('Vendas de peças de pc', 'Itens de pc usados', '2024-05-15 17:30:00.000', 1, 3);
 
 insert into donations (value, date_send, user_id, stream_id) values(4.0, '2024-05-15 17:30:00.000', 3 , 1);
 insert into donations (value, date_send, user_id, stream_id) values(5.0, '2024-05-15 17:30:00.000', 3 , 1);
