@@ -10,7 +10,7 @@ export function AuthenticatedHeader() {
       <AppBar position='static'>
         <Toolbar>
           <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
-            Products Store
+            Streams Crud
           </Typography>
         </Toolbar>
       </AppBar>
