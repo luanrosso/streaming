@@ -90,6 +90,24 @@ create table videos	(
 	foreign key (stream_id) references streams
 )
 
+/* Trigger */
+
+CREATE OR REPLACE FUNCTION check_date_open()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF NEW.date_open > NOW() THEN
+        RAISE EXCEPTION 'A data de abertura não pode ser uma data futura';
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_check_date_open
+BEFORE INSERT OR UPDATE ON streams
+FOR EACH ROW
+EXECUTE FUNCTION check_date_open();
+
+
 /* Insert values */
 
 
@@ -143,6 +161,7 @@ insert into streams (title, description, date_open, user_id, category_id) values
 insert into streams (title, description, date_open, user_id, category_id) values('Reagindo Memes', 'Memes quinta serie', '2024-05-15 15:30:00.000', 1, 2);
 insert into streams (title, description, date_open, user_id, category_id) values('Leilão de Carros', 'Leilão de carros usados', '2024-05-15 17:30:00.000', 1, 3);
 insert into streams (title, description, date_open, user_id, category_id) values('Vendas de peças de pc', 'Itens de pc usados', '2024-05-15 17:30:00.000', 1, 3);
+
 
 insert into donations (value, date_send, user_id, stream_id) values(4.0, '2024-05-15 17:30:00.000', 3 , 1);
 insert into donations (value, date_send, user_id, stream_id) values(5.0, '2024-05-15 17:30:00.000', 3 , 1);
