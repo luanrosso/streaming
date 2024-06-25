@@ -6,7 +6,7 @@ Luan Rosso - @luanrosso
 Filipe Guizzo - @Filipe-Guizzo
 
 
-# Modelo Físco
+# Modelo Físico
 
 Utilizamos a ferramenta de modelagem de dados draw.io para criação do modelo físico do banco de dados, para posterior exportação dos scripts DDL das tabelas e relacionamentos.
 Arquivo fonte: modelo_fisico
